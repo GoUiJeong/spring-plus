@@ -40,4 +40,16 @@ public class Todo extends Timestamped {
         this.user = user;
         this.managers.add(new Manager(user, this));
     }
+
+    // 담당자 수 반환 메서드
+    public Long getManagerCount() {
+        return (long) managers.size();
+    }
+
+    // 댓글 수 반환 메서드
+    public Long getCommentCount() {
+        return (long) comments.size();
+    }
+
 }
+
