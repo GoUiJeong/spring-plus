@@ -22,7 +22,7 @@
   - 할 일 검색 시 수정일 기준으로 기간 검색이 가능해야해요.
       - 기간의 시작과 끝 조건은 있을 수도 있고, 없을 수도 있어요!
   - JPQL을 사용하고, 쿼리 메소드명은 자유롭게 지정하되 너무 길지 않게 해주세요.
-    ![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/721cfb3f-4a05-4553-9398-899247ade5fa/0b4c4a5f-18a8-43b7-8955-69556254b7be/image.png)
+  ![image (7)](https://github.com/user-attachments/assets/3d85532b-7f3d-4332-b56d-50bf4021cae1)
 
 6.JPA Cascade / cascade = CascadeType.PERSIST
 
@@ -31,13 +31,14 @@
   - 해당 문제가 발생하지 않도록 코드를 수정해주세요.
 
   수정 전 코드
-  ![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/721cfb3f-4a05-4553-9398-899247ade5fa/bf4c49d0-2f0a-4884-888a-953483b8bf62/image.png)
+![image (8)](https://github.com/user-attachments/assets/b535079b-6a2c-4d68-a68e-bb5f0346a4de)
   
   수정 후 코드 ( FETCH 추가 해줌)
-  ![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/721cfb3f-4a05-4553-9398-899247ade5fa/a01b0d85-b4e5-43c8-bcb0-9ae771390c61/image.png)
+![image (9)](https://github.com/user-attachments/assets/11f71bfc-61e8-4aa0-88ed-59dc59926b49)
 
 8. QueryDSL
-  ![TodoService.getTodo 메소드](https://prod-files-secure.s3.us-west-2.amazonaws.com/721cfb3f-4a05-4553-9398-899247ade5fa/21df06d6-a203-4ca0-ab92-88d1e79aad11/image.png)
+<img width="677" alt="image (10)" src="https://github.com/user-attachments/assets/f9ce0bd5-6f67-4256-9885-fbcc894ad429" />
+
 TodoService.getTodo 메소드
 - JPQL로 작성된 `findByIdWithUser` 를 QueryDSL로 변경합니다.
 - 7번과 마찬가지로 N+1 문제가 발생하지 않도록 유의해 주세요!
@@ -60,7 +61,7 @@ QueryDSL은 타입 안전한 동적 쿼리 작성을 지원하는 Java 라이브
 쿼리를 작성할 때 타입 오류를 컴파일 시점에서 확인
 조건에 따라 동적으로 쿼리를 생성하고 실행
 Q타입 사용 - 엔티티 클래스마다 자동으로 생성되는 Q타입 클래스를 사용하여, SQL을 Java 코드처럼 작성
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/721cfb3f-4a05-4553-9398-899247ade5fa/547551c3-66e4-4f89-a0e5-113aed7b8558/image.png)
+![image (11)](https://github.com/user-attachments/assets/1de02764-9e3c-40c9-99d3-07dcab284132)
 
 고민했던 점
 JPAQueryFactory를 사용할 때, @PersistenceContext로 entityManager를 주입 받아야줘야 한다.
